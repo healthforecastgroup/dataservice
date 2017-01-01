@@ -23,8 +23,11 @@ ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
 # Name of the field used to store the owner of each document
 AUTH_FIELD = 'user_id'
 
-from app_users import app_users
-from medication import medication
+import os,sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from config.app_users import app_users
+from config.medication import medication
 
 DOMAIN = {
     'app_users': app_users,

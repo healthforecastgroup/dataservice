@@ -8,8 +8,6 @@ curl -u guest:guest -d '[{"username":"admin","password":"ADMIN","roles":["admin"
 curl -u guest:guest -d '[{"username":"donald","password":"TRUMP","roles":["user"]}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/app_users
 curl -u guest:guest -d '[{"username":"barack","password":"OBAMA","roles":["user"]}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/app_users
 
-
-
 # post medication
 curl -u donald:TRUMP -d '[{"username":"donald","current":[{"name":"Sulfuric acid 2%","dose":"20mL","frequency":"BID","route":"IV","indication":"Coprolalia"},{"name":"polyethylene glycol 3350", "dose":"20oz", "frequency":"QD", "route": "prn","indication":"diarrhea"}]}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/medication
 
@@ -19,23 +17,13 @@ curl -u barack:OBAMA -i http://127.0.0.1:5000/medication/donald
 # donald can get donalds medication
 curl -u donald:TRUMP -i http://127.0.0.1:5000/medication/donald
 
+# TODOS:
+
 # PATCH (edit), PUT (replace), DELETE (delete)
 # PATCH (edit), PUT (replace) the medication
 curl -u donald:TRUMP -d '{ "current": []}' -X PATCH -H 'Content-Type: application/json'  http://127.0.0.1:5000/medication/donald
 
 curl -u donald:TRUMP -H "If-Match: 58682fffe4721c22bb0f2a1d" -X PATCH http://127.0.0.1:5000/medication/58682fffe4721c22bb0f2a1d -d '{ "current": []}'
-
-
-curl -u donald:TRUMP -H "If-Match: donald" -X PATCH http://127.0.0.1:5000/medication/donald -d '{ "current": []}'
-
-
- -d '{ "current": []}' -X PATCH -H 'Content-Type: application/json'  
-ObjectId("")
-
-curl -H "If-Match: donald" -H "Content-Type: application/json" -X PATCH -i http://127.0.0.1:5000/medication/donald -d '{"current": ""}'
-
-
-PATCH (edit), PUT (replace), DELETE (delete)
 
 curl -H "Authorization: Basic GDSDDWZKKK" 
 

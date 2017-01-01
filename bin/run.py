@@ -39,7 +39,6 @@ def create_user(documents):
         document["token"] = (''.join(random.choice(string.ascii_uppercase)
                                   for x in range(10)))
 
-from home import home_dict
 
 if __name__ == '__main__':
 

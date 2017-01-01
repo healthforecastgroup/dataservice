@@ -20,4 +20,8 @@ cd hfg
 git clone http://github.com/nicolaiarocci/eve.git eve
 cd eve
 python setup.py install
+
+# get robomongo for admin ui for viewing mongodb
+http://askubuntu.com/questions/739297/how-to-install-robomongo-ubuntu-system-please-let-me-know/781793
+
 ## install 

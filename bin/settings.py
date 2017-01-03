@@ -28,10 +28,12 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from config.app_users import app_users
 from config.medication import medication
+from config.lib_drugs import lib_drugs
 
 DOMAIN = {
     'app_users': app_users,
     'medication': medication,
+    'lib_drugs': lib_drugs,
 }
 
 # doc on config.

@@ -17,6 +17,9 @@ curl -u barack:OBAMA -i http://127.0.0.1:5000/medication/donald
 # donald can get donalds medication
 curl -u donald:TRUMP -i http://127.0.0.1:5000/medication/donald
 
+# get drug list
+curl -u guest:guest -i http://localhost:5000/lib_drugs
+
 # TODOS:
 
 # PATCH (edit), PUT (replace), DELETE (delete)

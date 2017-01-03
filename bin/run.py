@@ -11,7 +11,10 @@ class RolesAuth(BasicAuth):
         # allow anyone to create a new account.
         print('checkauth')
         if resource == 'app_users' and method == 'POST':
-            print('checkauth True')
+            print('bypass auth')
+            return True
+        if resource == 'lib_drugs' and method == 'GET':
+            print('bypass auth')
             return True
         print('checkauth False')
         accounts = app.data.driver.db['app_users']

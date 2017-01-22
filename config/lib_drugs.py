@@ -5,7 +5,7 @@ schema = {
 
 lib_drugs = {
     'item_title': 'lib_drugs',
-
+    #'pagination': False,
     # by default the standard item entry point is defined as
     # '/people/<ObjectId>'. We leave it untouched, and we also enable an
     # additional read-only entry point. This way consumers can also perform
